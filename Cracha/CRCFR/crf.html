@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crachá Frente</title>
+    <link rel="stylesheet" href="crf.css">
+</head>
+<body>
+  <section>
+   <div class="wrapper">
+      <section class="sec" id="sec">
+          <form id="forml">
+             <label for="image">Foto:</label>
+             <input type="file" id="image" name="image" accept="image/*">
+             <label for="name">Nome:</label>
+             <input type="text" id="name" name="name" required>
+             <label for="role">Cargo:</label>
+             <input type="text" id="role" name="role" required>
+             <button id="bgc" type="button" onclick="generateBadge()">Gerar Crachá</button>
+          </form>
+      </section>
+    </div>
+  <section class="sec2" id="sectionprint">
+    <div class="container" id="badgeContainer" style="display:none;">
+        <div class="image-container" id="imageContainer">
+            <img src="" alt="Avatar usuário(a)" id="badgeImage">
+        </div>
+      <h2 id="badgeName"></h2>
+      <h3 id="badgeRole"></h3>
+      <script src="crf.js"></script>
+    </div>
+    <button id="btn" onclick="window.print('badgeContainer')">PRINT</button>
+  </section> 
+</body>

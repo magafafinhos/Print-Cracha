@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPD</title> 
+    <link rel="stylesheet" href="cpd.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section class="section">
+                <form id="cracha">
+                    <label for="cpd">CPD:</label>
+                    <input type="number" id="cpd" name="cpd" required="" step="1"><br><br>
+                    <label for="foto">QRcode:</label>
+                    <input type="file" id="foto" name="foto" accept="image/*" onchange="updateFileName()"><br>
+                    <p id="displayFileName">Nenhum arquivo selecionado</p><br>
+                    <input type="submit" value="Atualizar">
+                </form>
+        </section>
+        <section id="printableArea">
+            <div class="container">
+                <div class="container__infos">
+                    <h2 id="displayCPD">CPD: 0000</h2>
+                    <img id="displayFoto" src="" alt="" style="display:none;">
+                </div>
+            </div>
+
+        </section>
+        <button onclick="printContent('printableArea')">Imprimir</button>
+    </div>
+    
+</body>
+<script src="cpd.JS"></script>
+
+</html>
+

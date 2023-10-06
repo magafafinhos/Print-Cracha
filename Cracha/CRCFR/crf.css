@@ -1,0 +1,166 @@
+body{
+
+    background-color: #7a7070;
+    margin: 0;
+}
+
+.wrapper{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.sec{
+
+    width: 300px;
+    border: 1px solid #000000;
+    padding: 50px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+
+}
+
+label{
+
+    margin-top: 20px;
+
+}
+
+input{
+
+    margin-top: 10px;
+
+}
+
+#forml{
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+}
+
+#bgc{
+
+    cursor: pointer;
+    width: 300px;
+    margin-top: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.5s;
+
+}
+
+#bgc:hover{
+
+background-color: #1a702c;
+
+}
+
+.sec2{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+
+}
+
+.container{
+
+/* Precisa mudar esse container para mudar na impressão do cartão */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid #000000;
+    padding: 50px;
+    box-shadow: 0px 0px 10px 0px #000000;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-family: 'Arial', sans-serif;
+    
+}
+
+#badgeImage{
+
+    width: 96px;
+    height: 120px;
+
+}
+
+#btn{
+
+    cursor: pointer;
+    width: 300px;
+    margin-top: 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    transition: background-color 0.5s;
+
+}
+
+#btn:hover{
+
+    background-color: #1a702c;
+
+}
+
+/* @media print{
+
+    #sec{
+
+        visibility: hidden;
+    }
+
+} */
+
+@media print {
+    body * {
+      visibility: hidden;
+    }
+
+    .container {
+      box-shadow: none;
+      position: center;
+      top: 10px;
+      left: 0;
+      transform: none;
+      visibility: visible;
+    }
+
+    .container,
+    .container * {
+      visibility: visible;
+    }
+
+    .container {
+      margin: 0;
+      padding: 0;
+      width: auto;
+      height: auto;
+    }
+
+    button {
+      display: none;
+    }
+
+    @page {
+      size: 54mm 86mm;
+      margin: 0;
+    }
+  }

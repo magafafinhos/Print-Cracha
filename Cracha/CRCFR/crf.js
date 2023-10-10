@@ -15,21 +15,3 @@ function generateBadge() {
 
     document.getElementById('badgeContainer').style.display = 'flex';
   }
-
-// function printContent(el){
-
-//     var restorepage = document.body.innerHTML;
-//     var printContent = document.getElementById(el).innerHTML;
-//     document.body.innerHTML = printContent;
-//     window.print();
-//     document.body.innerHTML = restorepage
-
-// }
-
-// function printPageArea(imageContainer){
-//   var printContent = document.getElementById(imageContainer).innerHTML;
-//   var originalContent = document.body.innerHTML;
-//   document.body.innerHTML = printContent;
-//   window.print();
-//   document.body.innerHTML = originalContent;
-// }

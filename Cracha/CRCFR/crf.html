@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crachá Frente</title>
     <link rel="stylesheet" href="crf.css">
+
 </head>
+
 <body>
+
   <section>
-   <div class="wrapper">
+
+    <!-- Sessão do forms, o campo onde preenche para gerar o crachá -->
+
+   <div class="wrapper" class='no-print'>
       <section class="sec" id="sec">
+
           <form id="forml">
              <label for="image">Foto:</label>
              <input type="file" id="image" name="image" accept="image/*">
@@ -19,9 +27,12 @@
              <input type="text" id="role" name="role" required>
              <button id="bgc" type="button" onclick="generateBadge()">Gerar Crachá</button>
           </form>
+
       </section>
     </div>
+
   <section class="sec2" id="sectionprint">
+    <!-- sessão escondida que aparece depois de clicar no botão gerar crachá, essa sessção deverá ser formatada no css para mudar a impressão -->
     <div class="container" id="badgeContainer" style="display:none;">
         <div class="image-container" id="imageContainer">
             <img src="" alt="Avatar usuário(a)" id="badgeImage">
@@ -30,6 +41,8 @@
       <h3 id="badgeRole"></h3>
       <script src="crf.js"></script>
     </div>
+
     <button id="btn" onclick="window.print('badgeContainer')">PRINT</button>
+
   </section> 
 </body>

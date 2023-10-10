@@ -120,39 +120,46 @@ background-color: #1a702c;
 
 }
 
-/* @media print{
-
-    #sec{
-
-        visibility: hidden;
-    }
-
-} */
 
 @media print {
+
     body * {
-      visibility: hidden;
+
+        visibility: hidden;
+
     }
 
-    .container {
-      box-shadow: none;
-      position: center;
-      top: 10px;
-      left: 0;
-      transform: none;
-      visibility: visible;
+    .wrapper{
+
+        /* precisa ficar desligado para não sair na impressão, é todo o resto do conteúdo */
+        
+        visibility: none;
+        display: none   ;
+
     }
 
-    .container,
     .container * {
-      visibility: visible;
+
+        /* Container que sai na impressão */
+        
+        margin-top: 60px;
+        visibility: visible;
+        box-shadow: none;
+        border: 0px solid;
+        padding: 0px;
+
+    }   
+
+    #badgeName{
+
+        margin-top: 10px;
+
     }
 
-    .container {
-      margin: 0;
-      padding: 0;
-      width: auto;
-      height: auto;
+    #badgeRole{
+
+        margin-top: 0px;
+
     }
 
     button {
@@ -164,3 +171,5 @@ background-color: #1a702c;
       margin: 0;
     }
   }
+
+ 
